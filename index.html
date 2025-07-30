@@ -129,8 +129,38 @@
         position: absolute;
         left: 149px;
         top:50px ;
-        rotation:-15 deg;
+        
     }
+    .three1,
+.three2,
+.three3 {
+  overflow: hidden; /* NEW */
+}
+
+/* Adjust Card 3 image inside box */
+.btle3 {
+  position: absolute;
+  left: 130px; /* adjust to fit inside */
+  top: 40px;
+  transform: rotate(-15deg);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Optional: Center the .grp image better if needed */
+.grp {
+  margin-top: -30px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Fix Card 1 image overflow */
+.three1 img {
+  height: 220px;
+  width: 180px;
+  object-fit: contain;
+}
 
 
 
@@ -483,13 +513,13 @@
           <a class="nav-link active Home-link"  aria-current="page"  href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Products</a>
+          <a class="nav-link active" href="new1.html">Products</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Gifting</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">About</a>
+          <a class="nav-link active" href="about.html">About</a>
         </li>
       </ul>
 
@@ -501,7 +531,7 @@
   </div>
 
   <!-- Icons -->
-  <span class="circle border"> <a href="#" class="text-dark"><i class="bi bi-cart3 fs-5"></i></a></span>
+  <span class="circle border"> <a href="ca" class="text-dark"><i class="bi bi-cart3 fs-5"></i></a></span>
   <span class="circle border"><a href="#" class="text-dark"><i class="bi bi-bell fs-5"></i></a></span>
   <span class="circle border"><a href="registration.html" class="text-dark"><i class="bi bi-person fs-5"></i></a></span>
 </div>
