@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart Item Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+
+  <style>
+    body{
+      margin: 0;
+      padding-top: 70px;
+    }
+     a.navbar-brand{
+    color:  #2d4262;
+    font-size: 20px;
+    font-weight: bold;
+     }
+     
+#navbarTogglerDemo03 .navbar-nav{
+    font-size: 15px;
+}
+#navbarTogglerDemo03 .form-control{
+    width: 100%;
+    padding: 8px 1px 8px 40px;
+    font-size: 13px;
+    border-radius: 20px;   
+    font-weight: 400;      
+}
+.collapse ul{
+    gap: 15px; 
+}
+
+form i{
+    position: absolute;
+    left: 71%;
+    top: 40%;
+    transform: translate(-50%);
+    font-size: 15px;
+    color: rgb(47, 46, 46);
+}
+.nav-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+
+.circle {
+  width: 40px;
+  height: 33px; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ .product-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .product-card img {
+      width: 90px;
+      height: auto;
+    }
+
+    .product-details {
+      flex: 1;
+    }
+
+    .quantity-btn {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 4px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .price-strike {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .discount-text {
+      color: green;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .btn-delete, .btn-share, .btn-buy, .btn-proceed {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: none;
+    }
+
+    .btn-delete {
+      border: 1px solid red;
+      background-color: white;
+      color: red;
+    }
+
+    .btn-share {
+      border: 1px solid black;
+      background-color: white;
+      color: black;
+    }
+
+    .btn-buy {
+      border: none;
+      background-color: #003d4d;
+      color: white;
+    }
+
+    .btn-proceed {
+      background-color: #003d4d;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+     
+    }
+
+   /* ✅ Properly override hover effect */
+.btn-delete:hover {
+  background-color: white !important;
+  color: red !important;
+  border: 1px solid red !important;
+  box-shadow: none !important;
+}
+
+.btn-share:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  box-shadow: none !important;
+}
+
+.btn-buy:hover {
+  background-color: #003d4d !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-proceed:hover {
+  background-color: #003d4d !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+    .checkout-box {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
+      
+      
+    }
+    .check{
+      position: fixed;
+      margin-left: 50%;
+    }
+    
+
+    .footer-note {
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 30%;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    p.text-muted {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+   
+  footer {
+  background-color: #92c2c3;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  width: 1500px;
+  height: 330px;
+  margin-top: 3%;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.footer-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 0;
+}
+
+.footer-bottom-bar {
+  width: 100%;
+  background-color: #92c2c3;
+}
+footer h6, footer h4 {
+  font-weight: 700;
+}
+.fragan h4 {
+  color: #92c2c3;
+  margin-top: 50px;
+}
+footer a {
+  text-decoration: none;
+}
+footer .social-icons i {
+  font-size: 18px;
+}
+.right{
+  margin-top: 10px;
+  margin-right: 50px;
+}
+.left{
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white shadow-sm fixed-top" style="height: 70px;">
+        <div class="container-fluid mx-4">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Fragranzia</a>
+            <div class="collapse navbar-collapse d-flex justify-content-end d-grid gap-4" id="navbarTogglerDemo03">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Gifting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3 ms-3 ">
+         <div class="position-relative">
+    <i class="bi bi-search position-absolute text-muted" style="top: 50%; left: 8px; transform: translateY(-50%); font-size: 14px;"></i>
+    <input type="text" class="form-control form-control-sm ps-4 rounded-pill" placeholder="Search here" style="width: 200px;">
+  </div>
+
+                <div class="nav-icons">
+                    <span class="circle border"> <a href="#" class="text-dark"><i class="bi bi-cart3 fs-5"></i></a></span>
+  <span class="circle border"><a href="#" class="text-dark"><i class="bi bi-bell fs-5"></i></a></span>
+  <span class="circle border"><a href="#" class="text-dark"><i class="bi bi-person fs-5"></i></a></span>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid my-4">
+  
+  
+  <div class="row">
+    <!-- Left Column -->
+    <div class="col-lg-6">
+      <h2 class="fw-bold">Cart</h2>
+      <p class="text-muted">Home > Cart</p>
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="autograph.jpg" alt="Perfume 1">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="deodorant.jpg" alt="Perfume 2">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="nereus.jpg" alt="Perfume 2">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Checkout -->
+    <div class="col-lg-4 d-flex flex-column align-items-start check">
+      <div class="checkout-box w-100">
+        <h5><strong>Check Out</strong></h5>
+        <p>Price (3 item) <span class="float-end"><strong>Rs 3,097</strong></span></p>
+        <p>Discount <span class="float-end"><strong>Rs 4,404</strong></span></p>
+        <p>Delivery Charge <span class="float-end text-success">Free</span></p>
+        
+        <p>Total Amount <span class="float-end"><strong>Rs 3,493</strong></span></p>
+        
+        
+    </div>
+    <button class="btn-proceed ">Proceed to Buy</button>
+    <div class="footer-note">Safe and Secure Payments. Easy <br>returns. 100% Authentic products.</div>
+      </div>
+  </div>
+  
+</div>
+
+
+ <footer class="footer">
+    <div class="container py-5">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-md-3 mb-3 fragan">
+          <h4 class="text-dark fw-bold">Fragranzia</h4>
+        </div>
+
+        <!-- Pages -->
+        <div class="col-md-2 mb-3">
+          <h6 class="text-dark fw-bold">Pages</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark">Home</a></li>
+            <li><a href="#" class="text-dark">Products</a></li>
+            <li><a href="#" class="text-dark">Gifting</a></li>
+            <li><a href="#" class="text-dark">About</a></li>
+            <li><a href="#" class="text-dark">Profile</a></li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-3 mb-3">
+          <h6 class="text-dark fw-bold">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-dark">Privacy policy</a></li>
+            <li><a href="#" class="text-dark">Terms and conditions</a></li>
+            <li><a href="#" class="text-dark">FAQs</a></li>
+            <li><a href="#" class="text-dark">Customer service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact and Social -->
+        <div class="col-md-4 mb-3">
+          <p class="mb-2 text-dark"><i class="bi bi-envelope me-2"></i> tfrafurniture@gmail.com</p>
+          <p class="mb-3 text-dark"><i class="bi bi-telephone me-2"></i> +91 9876543210</p>
+          <h6 class="text-dark fw-bold mb-2">Social Media</h6>
+          <div class="d-flex gap-3 social-icons">
+            <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Full-width bold line -->
+    <div class="footer-line"></div>
+
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom-bar">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="text-center text-md-start mb-2 mb-md-0 left">
+          <a href="#" class="text-dark me-2">Web Accessibility</a> |
+          <a href="#" class="text-dark mx-2">Terms of Use</a> |
+          <a href="#" class="text-dark mx-2">Privacy Statement</a> |
+          <a href="#" class="text-dark ms-2">Contact Us</a>
+        </div>
+        <div class="text-center text-md-end text-dark right">
+          © 2024 fragranzia Company. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+
+</body>
+</html>

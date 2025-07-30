@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+     .featured-collection {
+  padding:40px  20px;
+}
+
+.feature-title i {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.featured-collection h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.collections.scrollable {
+  display: flex;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.collection-body {
+  flex: 0 0 auto;
+  padding: 15px;
+  width: 24.7%;
+
+}
+
+.collection-image img:hover {
+  transform: scale(1.03);
+}
+
+.collection-image:hover {
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 70px;
+  border-bottom-left-radius: 70px;
+}
+
+.collection-image {
+  background-position: center;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  height: 340px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #fff;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.collection-image img {
+  margin-top: 25px;
+}
+
+.collection-image .img1{
+ position: relative;
+  float: left;
+  top: -93%;
+  height: 80px;
+  left: 7%;
+}
+.collection-image h5{
+  margin-top: -280px;
+  margin-left: -25%;
+  position: absolute;
+   color: rgb(120, 34, 34);
+  font-size: 18px;
+  transform: rotate(-38deg);
+}
+.collection-body h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0;
+  height: 40px;
+}
+
+.price {
+  align-items: left;
+  gap: 3px;
+}
+
+.price p {
+  font-weight: 550;
+  color: #333;
+  margin-top: -2%;
+  font-size: 17px;
+
+}
+
+.price span {
+  text-decoration: line-through;
+  color: #999;
+  padding: 8px;
+  font-size: 11px;
+  margin-top: -2%;
+}
+
+.cart-btn {
+  background-color: #00354B;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  margin-top: 0%;
+}
+
+    </style>
+</head>
+<body>
+  <div class="featured-collection mx-4">
+            <div class="feature-title d-flex justify-content-between">
+                <h4>Featured <span style="color: #00354b;">Collections</span></h4>
+                <div class="nav-icons  d-flex d-grid gap-1">
+                    <span class="circles border">
+                        <j class="fa-solid fa-less-than"></j>
+                    </span>
+                    <span class="circles border">
+                        <j class="fa-solid fa-greater-than"></j>
+                    </span>
+                </div>
+            </div>
+            <div class="collections scrollable">
+                <div class="collection-body">
+                    <div class="collection-image ">
+                        <img src="autograph.jpg" alt="autograph.jpg" width="240" height="240" class="mt-4">
+                        <img src="stamp (2).png" alt="" width="100" height="100" class="img1">
+                        <h5>New</h5>
+                    </div>
+                    <h6>Autograph Eau De Parfum 100ml <br> For Men</h6>
+                    <div class="price d-flex">
+                        <p><b>RS 650 </b></p><span>RS 1400</span>
+                    </div>
+                    <a href="#" onclick="window.location.href='whishlist.html'" class="cart-btn">Add to Cart</a>
+                </div>
+                <div class="collection-body">
+                    <div class="collection-image">
+                        <img src="kyros.png" alt="kyros.png" width="280" height="280">
+                        <img src="stamp (2).png" alt="" width="100" height="100" class="img1">
+                        <h5>New</h5>
+                    </div>
+                    <h6>Kyros Eau De Parfum 100ml <br> For Men</h6>
+                    <div class="price d-flex">
+                        <p><b>RS 899</b></p><span>RS 2000</span>
+                    </div>
+                    <a href="#" onclick="window.location.href='whishlist.html'" class="cart-btn">Add to Cart</a>
+                </div>
+                <div class="collection-body">
+                    <div class="collection-image">
+                        <img src="dubai.jpg" alt="dubai.jpg" width="280" height="280">
+                        <img src="stamp (2).png" alt="" width="100" height="100" class="img1">
+                        <h5>New</h5>
+                    </div>
+                    <h6>Autograph Eau De Parfum 100ml <br> For Men</h6>
+                    <div class="price d-flex ">
+                        <p><b>RS 999</b></p><span>RS 2241</span>
+                    </div>
+                    <a href="#" onclick="window.location.href='whishlist.html'" class="cart-btn">Add to Cart</a>
+                </div>
+                <div class="collection-body">
+                    <div class="collection-image">
+                        <img src="nereus.jpg" alt="nereus.jpg" width="280" height="280" class="p-2">
+                        <img src="stamp (2).png" alt="" width="100" height="100" class="img1">
+                        <h5>New</h5>
+                    </div>
+                    <h6>Royal Eau De Parfum 100ml <br> For Men</h6>
+                    <div class="price d-flex">
+                        <p> <b>RS 650 </b></p><span>RS 1400</span>
+                    </div>
+                    <a href="#" onclick="window.location.href='whishlist.html'" class="cart-btn">Add to Cart</a>
+                </div>
+                <div class="collection-body">
+                    <div class="collection-image">
+                        <img src="kuwait.jpg" alt="kuwait.jpg" width="280" height="280">
+                        <img src="stamp (2).png" alt="" width="100" height="100" class="img1">
+                        <h5>New</h5>
+                    </div>
+                    <h6>Royal Eau De Parfum 100ml <br> For Men</h6>
+                    <div class="price d-flex">
+                        <p> <b>RS 650 </b></p><span>RS 1400</span>
+                    </div>
+                    <a href="#" onclick="window.location.href='whishlist.html'" class="cart-btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>

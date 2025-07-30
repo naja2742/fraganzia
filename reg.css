@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 70%;
+  height: 90%;
+  gap: 50px;
+ 
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+.left-section {
+  flex: 1;
+  background: rgba(0,0,0,0.6) url(caucasian-woman-applying-perfume-her-neck_53876-14.avif) ;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 450px;
+  position:relative;
+  border-top-right-radius: 230px;
+  border-bottom-left-radius: 230px;
+  margin-left: 100px;
+  margin-top: 100px;
+  overflow: hidden;
+ background-blend-mode: darken;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 32px;
+  margin-top: 15px;
+ 
+}
+
+.overlay p {
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.social-buttons button {
+  width: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; 
+  padding: 8px 12px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.facebook{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; 
+  padding: 8px 12px;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.divider::before {
+  margin-right: 10px;
+}
+
+.divider::after {
+  margin-left: 10px;
+}
+
+
+
+
+form input {
+  width: 90%;
+  margin-left: 200px;
+  padding: 10px;
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+ background-color: lightgrey;
+ position: relative;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 10px;
+
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-container a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.checkbox-container a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 50%;
+  padding: 10px;
+  background-color: #003b4a;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #005f73;
+}
+
+.login-text {
+  text-align: ce;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.login-text a {
+  color: #003b4a;
+  text-decoration: none;
+}

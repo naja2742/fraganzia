@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fragranzia - Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      border: 1px solid #ddd;
+    }
+
+    .product-card img {
+      width: 90px;
+      height: auto;
+    }
+
+    .product-details {
+      flex: 1;
+    }
+
+    .quantity-btn {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      padding: 4px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .price-strike {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    .discount-text {
+      color: green;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .btn-delete, .btn-share, .btn-buy, .btn-proceed {
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: none;
+    }
+
+    .btn-delete {
+      border: 1px solid red;
+      background-color: white;
+      color: red;
+    }
+
+    .btn-share {
+      border: 1px solid black;
+      background-color: white;
+      color: black;
+    }
+
+    .btn-buy {
+      border: none;
+      background-color: #003d4d;
+      color: white;
+    }
+
+    .btn-proceed {
+      background-color: #003d4d;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+   /* ✅ Properly override hover effect */
+.btn-delete:hover {
+  background-color: white !important;
+  color: red !important;
+  border: 1px solid red !important;
+  box-shadow: none !important;
+}
+
+.btn-share:hover {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  box-shadow: none !important;
+}
+
+.btn-buy:hover {
+  background-color: #003d4d !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-proceed:hover {
+  background-color: #003d4d !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+    .checkout-box {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border: 1px solid #ddd;
+      
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      margin-top: 20px;
+      margin-left: 30%;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+
+    p.text-muted {
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container my-4">
+  
+  
+  <div class="row  align-items-start">
+    <!-- Left Column -->
+    <div class="col-lg-6">
+      <h2 class="fw-bold">Cart</h2>
+      <p class="text-muted">Home > Cart</p>
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="autograph.jpg" alt="Perfume 1">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="deodorant.jpg" alt="Perfume 2">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="nereus.jpg" alt="Perfume 2">
+        <div class="product-details">
+          <h6>Autograph eau de parfum 100ml for men</h6>
+          <div class="d-flex align-items-center mb-2">
+            <button class="quantity-btn">-</button>
+            <span>1</span>
+            <button class="quantity-btn">+</button>
+          </div>
+          <div class="d-flex align-items-center mb-2">
+            <span class="price">Rs 899</span>
+            <span class="price-strike">Rs 2000</span>
+            <span class="discount-text">61% off</span>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn-delete">Delete</button>
+            <button class="btn-share">Share</button>
+            <button class="btn-buy">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column - Checkout -->
+    <div class="col-lg-4 d-flex flex-column align-items-start">
+      <div class="checkout-box w-100">
+        <h5><strong>Check Out</strong></h5>
+        <p>Price (3 item) <span class="float-end"><strong>Rs 3,097</strong></span></p>
+        <p>Discount <span class="float-end"><strong>Rs 4,404</strong></span></p>
+        <p>Delivery Charge <span class="float-end text-success">Free</span></p>
+        
+        <p>Total Amount <span class="float-end"><strong>Rs 3,493</strong></span></p>
+        
+        
+    </div>
+    <button class="btn-proceed">Proceed to Buy</button>
+    <div class="footer-note">Safe and Secure Payments. Easy <br>returns. 100% Authentic products.</div>
+      </div>
+  </div>
+  
+</div>
+
+</body>
+</html>
