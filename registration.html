@@ -2,13 +2,238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Create Account</title>
-  <link rel="stylesheet" href="reg.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1100px;
+      height: auto;
+      gap: 30px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+
+    .left-section {
+      flex: 1;
+      min-width: 280px;
+      background: rgba(0, 0, 0, 0.6) url(caucasian-woman-applying-perfume-her-neck_53876-14.avif);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      border-top-right-radius: 230px;
+      border-bottom-left-radius: 230px;
+      overflow: hidden;
+      background-blend-mode: darken;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 400px;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 20px;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 16px;
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 280px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-container {
+      width: 100%;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-buttons button {
+      flex: 1;
+      min-width: 140px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      margin: 20px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .divider::before {
+      margin-right: 10px;
+    }
+
+    .divider::after {
+      margin-left: 10px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #eee;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #333;
+      margin: 10px 0 20px;
+    }
+
+    .checkbox-container input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-container a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .checkbox-container a:hover {
+      text-decoration: underline;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #003b4a;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #005f73;
+    }
+
+    .submit-btn a {
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .login-text {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .login-text a {
+      color: #003b4a;
+      text-decoration: none;
+    }
+
+    /* ---------- Media Queries ---------- */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-section {
+        border-radius: 0;
+        min-height: 300px;
+      }
+
+      .right-panel {
+        padding: 20px;
+      }
+
+      .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .social-buttons button {
+        width: 100%;
+      }
+
+      .submit-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-  
     <div class="left-section">
       <div class="overlay">
         <h1>Let's Get Started!</h1><br>
@@ -16,40 +241,38 @@
       </div>
     </div>
 
-  
-      <div class="right-panel">
+    <div class="right-panel">
       <div class="form-container">
         <div class="social-buttons">
-          <button class="google"><img src="281764.png" alt="281764.png" height="15px" width="15px">
+          <button class="google">
+            <img src="281764.png" alt="Google Icon" height="15px" width="15px">
             <span>Google</span>
           </button>
-          <button class="facebook"><img src="facebook_googblue_48dp.png" alt="facebook_googblue_48dp.png" height="18px" width="18px">
+          <button class="facebook">
+            <img src="facebook_googblue_48dp.png" alt="Facebook Icon" height="18px" width="18px">
             <span>Facebook</span>
           </button>
         </div>
+
         <p class="divider">Or sign up with email</p>
 
-       
         <form>
           <input type="text" placeholder="Enter your username" required />
           <input type="email" placeholder="Enter your E-Mail" required />
           <input type="password" placeholder="Enter your password" required />
           <input type="password" placeholder="Confirm your password" required />
 
-        <div class="checkbox-container">
-        <input type="checkbox" id="terms">
-        <label for="terms">Agree with <a href="#">Terms & Conditions</a></label>
-        </div>
+          <div class="checkbox-container">
+            <input type="checkbox" id="terms" required>
+            <label for="terms">Agree with <a href="#">Terms & Conditions</a></label>
+          </div>
 
-
-
-          <button type="submit" class="submit-btn"><a href="login.html" class="sign-btn"> Sign Up</a> </button>
+          <button type="submit" class="submit-btn"><a href="login.html">Sign Up</a></button>
         </form>
 
         <p class="login-text">Already have an account? <a href="#">Sign In</a></p>
       </div>
     </div>
   </div>
-  
 </body>
 </html>
