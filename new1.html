@@ -14,11 +14,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 <style>
-    *{
+  
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
+
 
 header{
     background-color: #00354B;
@@ -40,10 +43,13 @@ header{
     font-size: 10px;
 }
 .collection-body {
-    flex: 0 0 auto;
+    
     padding: 15px;
-    width: 29.7%;  
+            /* Allow Bootstrap to handle width */
+    max-width: 100%;     /* Prevent overflow */
 }
+ 
+
 .collection-image img:hover{
     transform: scale(1.03);
     height: 300px;
@@ -56,23 +62,26 @@ header{
     border-bottom-left-radius: 70px;   
 }
 .collection-image {
-    background-position: center;
-    margin-bottom: 10px;
-    border: 2px solid #ddd;
-    width: 350px;
-    height: 340px;
+    width: 100%;               /* Fully responsive */
+    max-width: 350px;          /* Optional max width */
+    height: auto;              /* Let image define height */
+    aspect-ratio: 1 / 1;       /* Keeps square shape */
+    margin: 0 auto 10px auto;  /* Center it */
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: center;
     background-color: #fff;
+    border: 2px solid #ddd;
     border-top-left-radius: 70px;
     border-bottom-right-radius: 70px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease; 
-    transition: width 3s, height 3s;   
+    transition: all 0.5s ease;
 }
 .collection-image img{
-    margin-top: 25px;  
+      margin-top: 25px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Keeps the image aspect ratio */
+    transition: transform 0.5s ease;
 }
 .collection-body h6 {
     font-size: 18px;
@@ -181,19 +190,28 @@ header{
       margin-top: 10px;
       margin-left: 50px;
     }
+     html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
 </style>
 </head>
 
 <body>
    
     <header>
-        <div class="header d-flex justify-content-center my-2">
+       <div class="header d-flex justify-content-center my-2">
             <h6 class="mt-1">ENJOY FESTIVE DISCOUNTS! FREE SHIPING ABOVE 999!</h6>
         </div>
     </header>
     <div class="heading container-fluid  mx-5">
         <h2>All Products</h2>
-        <div class="filter d-flex d-grid gap-5">
+     <div class="filter d-flex d-grid gap-5">
             <li>Sort By:</li>
             <li style="color: #00354b;"><b>Relevence </b></li>
             <li>Newest First</li>
@@ -206,156 +224,187 @@ header{
         <p>Home > Products</p>
     </div>
     
-    <div class="product container-fluid py-4">
-        <div class="row g-4 mx-4">
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="autograph.jpg" alt="" width="200" height="200" class="mt-5">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="product1.html" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4 ">
-                <div class="collection-image">
-                    <img src="concentrated.jpg" alt="" width="280" height="280" style="background-color: white;">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="whishlist.html" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="eau.jpg" alt="" width="250" height="300">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
+  <div class="product container-fluid py-4">
+    <div class="row g-4 mx-4">
+
+      <!-- Product 1 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="autograph.jpg" alt="Autograph" width="200" height="200" class="mt-3">
         </div>
-        <div class="row g-4 mx-4 ">
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="dubai.jpg" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="body mist.jpg" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="deodorant.jpg" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
         </div>
-        <div class="row g-4 mx-4">
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="kuwait.jpg" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="kyros.png" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
-            <div class="collection-body col-sm-6 col-md-4">
-                <div class="collection-image">
-                    <img src="nereus.jpg" alt="" width="280" height="280">
-                </div>
-                <h6>Kyros Eau De Parfum 100ml For Men</h6>
-                <div class="price d-flex">
-                    <p><b>RS 899</b></p><span>RS 2000</span>
-                </div>
-                <a href="#" class="cart-btn">Add to Cart</a>
-            </div>
+        <a href="product1.html" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="concentrated.jpg" alt="Concentrated" width="280" height="280">
         </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="whishlist.html" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="eau.jpg" alt="Eau" width="250" height="300">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="dubai.jpg" alt="Dubai" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="body mist.jpg" alt="Body Mist" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="deodorant.jpg" alt="Deodorant" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="kuwait.jpg" alt="Kuwait" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="kyros.png" alt="Kyros" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="collection-body col-12 col-sm-12 col-md-6 col-lg-4">
+        <div class="collection-image">
+          <img src="nereus.jpg" alt="Nereus" width="280" height="280">
+        </div>
+        <h6>Kyros Eau De Parfum 100ml For Men</h6>
+        <div class="price d-flex justify-content-center">
+          <p><b>RS 899</b></p><span>RS 2000</span>
+        </div>
+        <a href="#" class="cart-btn btn btn-dark btn-sm rounded-3">Add to Cart</a>
+      </div>
+
     </div>
-    <!-- loading-->
-    <div class="load-btn"><button>Load More</button></div>
-    <footer>
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-md-3 mb-3"><h4 class="text-dark fw-bold">Fragranzia</h4></div>
-        <div class="col-md-2 mb-3">
-          <h6 class="text-dark fw-bold">Pages</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-dark">Home</a></li>
-            <li><a href="#" class="text-dark">Products</a></li>
-            <li><a href="#" class="text-dark">Gifting</a></li>
-            <li><a href="#" class="text-dark">About</a></li>
-            <li><a href="#" class="text-dark">Profile</a></li>
-          </ul>
-        </div>
-        <div class="col-md-3 mb-3">
-          <h6 class="text-dark fw-bold">Quick Links</h6>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-dark">Privacy policy</a></li>
-            <li><a href="#" class="text-dark">Terms and conditions</a></li>
-            <li><a href="#" class="text-dark">FAQs</a></li>
-            <li><a href="#" class="text-dark">Customer service</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3">
-          <p class="text-dark"><i class="bi bi-envelope me-2"></i> tfrafurniture@gmail.com</p>
-          <p class="text-dark"><i class="bi bi-telephone me-2"></i> +91 9876543210</p>
-          <h6 class="text-dark fw-bold">Social Media</h6>
-          <div class="d-flex gap-3 social-icons">
-            <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
-          </div>
+  </div>
+
+  <!-- Load More Button -->
+  <div class="load-btn"><button>Load More</button></div>
+
+     <footer style="background-color: #8BB8BE;">
+  <div class="container-fluid py-5 px-4 px-md-5">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-12 col-md-3 mb-4">
+        <h4 class="text-dark fw-bold">Fragranzia</h4>
+      </div>
+
+      <!-- Pages -->
+      <div class="col-6 col-md-2 mb-4">
+        <h6 class="text-dark fw-bold">Pages</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark">Home</a></li>
+          <li><a href="#" class="text-dark">Products</a></li>
+          <li><a href="#" class="text-dark">Gifting</a></li>
+          <li><a href="#" class="text-dark">About</a></li>
+          <li><a href="#" class="text-dark">Profile</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-6 col-md-3 mb-4">
+        <h6 class="text-dark fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark">Privacy policy</a></li>
+          <li><a href="#" class="text-dark">Terms and conditions</a></li>
+          <li><a href="#" class="text-dark">FAQs</a></li>
+          <li><a href="#" class="text-dark">Customer service</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Social -->
+      <div class="col-12 col-md-4 mb-4">
+        <p class="text-dark mb-1"><i class="bi bi-envelope me-2"></i> tfrafurniture@gmail.com</p>
+        <p class="text-dark mb-2"><i class="bi bi-telephone me-2"></i> +91 9876543210</p>
+        <h6 class="text-dark fw-bold">Social Media</h6>
+        <div class="d-flex gap-3 mt-2 flex-wrap">
+          <a href="#" class="text-dark"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
     </div>
-    <div class="footer-line"></div>
-    <div class="footer-bottom-bar">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center px-4 py-2">
-        <div class="left text-center text-md-start">
-          <a href="#" class="text-dark me-2">Web Accessibility</a> |
-          <a href="#" class="text-dark mx-2">Terms of Use</a> |
-          <a href="#" class="text-dark mx-2">Privacy Statement</a> |
-          <a href="#" class="text-dark ms-2">Contact Us</a>
-        </div>
-        <div class="right text-center text-md-end text-dark">© 2024 Fragranzia Company. All rights reserved.</div>
+  </div>
+
+  <!-- Line separator -->
+  <div class="footer-line border-top"></div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom-bar w-100" style="background-color: #8BB8BE; margin-left: 0; padding-left: 0; padding-right: 0;">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center px-4 py-3 gap-2 text-center text-md-start">
+      <div class="left">
+        <a href="#" class="text-dark me-2">Web Accessibility</a> |
+        <a href="#" class="text-dark mx-2">Terms of Use</a> |
+        <a href="#" class="text-dark mx-2">Privacy Statement</a> |
+        <a href="#" class="text-dark ms-2">Contact Us</a>
       </div>
+      <div class="right text-dark">© 2024 Fragranzia Company. All rights reserved.</div>
     </div>
-  </footer>
+  </div>
+</footer>
+   
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
