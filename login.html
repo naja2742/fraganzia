@@ -2,14 +2,190 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login</title>
-  <link rel="stylesheet" href="login.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1100px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .left-section {
+      flex: 1;
+      background: rgba(0,0,0,0.6) url(download.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-blend-mode: darken;
+
+      border-top-left-radius: 12vw;
+      border-bottom-right-radius: 12vw;
+
+      min-width: 280px;
+      max-width: 500px;
+      aspect-ratio: 3 / 4;
+
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .overlay {
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .overlay h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .overlay p {
+      font-size: 14px;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      min-width: 280px;
+    }
+
+    .form-container {
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .social-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-buttons button {
+      flex: 1;
+      min-width: 140px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      margin: 20px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .divider::before {
+      margin-right: 10px;
+    }
+
+    .divider::after {
+      margin-left: 10px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #f0f0f0;
+    }
+
+    .input-group label {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 10px;
+    }
+
+    .input-group label a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #003b46;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn a {
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .signup-text {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+
+    .signup-text a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-
-    
     <div class="left-section">
       <div class="overlay">
         <h1>Welcome Back</h1>
@@ -17,40 +193,35 @@
       </div>
     </div>
 
-    
     <div class="right-panel">
       <div class="form-container">
-        
-        
         <div class="social-buttons">
-         <button class="google"><img src="281764.png" alt="281764.png" height="15px" width="15px">
+          <button class="google">
+            <img src="281764.png" alt="Google" height="15" width="15">
             <span>Google</span>
           </button>
-          <button class="facebook"><img src="facebook_googblue_48dp.png" alt="facebook_googblue_48dp.png" height="18px" width="18px">
+          <button class="facebook">
+            <img src="facebook_googblue_48dp.png" alt="Facebook" height="18" width="18">
             <span>Facebook</span>
           </button>
         </div>
 
         <p class="divider">Or sign in with email</p>
 
-      
         <form>
           <div class="input-group">
             <input type="text" placeholder="Enter your username" required />
           </div>
           <div class="input-group">
             <input type="password" placeholder="Enter your password" required />
-            <label for="forgot"><a href="#">forgot Password?</a></label>
-        
+            <label><a href="#">Forgot Password?</a></label>
           </div>
-
-          <button type="submit" class="submit-btn"><a href="index.html" class="login-btn">Log In</a></button>
+          <button type="submit" class="submit-btn"><a href="index.html">Log In</a></button>
         </form>
 
         <p class="signup-text">Don’t have an account? <a href="#">Sign Up</a></p>
       </div>
     </div>
-
   </div>
 </body>
 </html>
